@@ -11,6 +11,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { AboutPage } from '../pages/about/about';
 import { TerceraPage } from '../pages/tercera/tercera';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule, AngularFireDatabase } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyB6IuLXDqwLfriT525X4n_FhbIzsiIKKwA",
+  authDomain: "ltaxis-app.firebaseapp.com",
+  databaseURL: "https://ltaxis-app.firebaseio.com",
+  projectId: "ltaxis-app",
+  storageBucket: "ltaxis-app.appspot.com",
+  messagingSenderId: "61719009053"
+};
 
 @NgModule({
   declarations: [
@@ -24,7 +36,10 @@ import { TerceraPage } from '../pages/tercera/tercera';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,6 +54,7 @@ import { TerceraPage } from '../pages/tercera/tercera';
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

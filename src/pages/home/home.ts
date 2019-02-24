@@ -23,7 +23,7 @@ export class HomePage {
   }
 
   irAVistaDeDetalle() {
-    alert('Esta funcionando');
+    this.navCtrl.push(LugarPage, {lugar: {}});
   }
 
 }

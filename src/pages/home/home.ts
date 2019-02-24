@@ -30,4 +30,12 @@ export class HomePage {
     this.navCtrl.push(LugarPage, {lugar: lugar});
   }
 
+  borrarLugar(lugar) {
+    if (confirm('¿Seguro que desea borrar este registro?')) {
+      return this.lugaresServices.deleteLugar(lugar).then(() => {
+        alert('Registro borrado correctamente');
+      });
+    }
+  }
+
 }

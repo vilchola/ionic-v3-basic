@@ -7,15 +7,17 @@
 </ion-header>
 
 <ion-content>
-  <p padding>Texto cualquiera</p>
-  <p padding-left>Texto cualquiera</p>
-  <p padding-right>Texto cualquiera</p>
-  <p padding-bottom>Texto cualquiera</p>
-  <p padding-top>Texto cualquiera</p>
+  <ion-list>
+    <ion-item *ngFor="let lugar of lugares">
+      <h2>{{lugar.nombre}}</h2>
+      <h3>{{lugar.direccion}}</h3>
+      <p>{{lugar.categoria}}</p>
+    </ion-item>
+  </ion-list>
 
-  <p margin>Texto cualquiera</p>
-  <p margin-left>Texto cualquiera</p>
-  <p margin-right>Texto cualquiera</p>
-  <p margin-bottom>Texto cualquiera</p>
-  <p margin-top>Texto cualquiera</p>
+  <ion-fab bottom right>
+    <button ion-fab (click)="irAVistaDeDetalle()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

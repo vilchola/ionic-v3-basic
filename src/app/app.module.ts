@@ -10,6 +10,7 @@ import { LugarPage } from '../pages/lugar/lugar';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { AboutPage } from '../pages/about/about';
+import { TerceraPage } from '../pages/tercera/tercera';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutPage } from '../pages/about/about';
     LugarPage,
     TabsPage,
     PerfilPage,
-    AboutPage
+    AboutPage,
+    TerceraPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { AboutPage } from '../pages/about/about';
     LugarPage,
     TabsPage,
     PerfilPage,
-    AboutPage
+    AboutPage,
+    TerceraPage
   ],
   providers: [
     StatusBar,

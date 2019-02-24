@@ -27,7 +27,7 @@ export class LugaresService {
     }
 
     public deleteLugar(lugar) {
-        // reto para ti
+        return this.afDB.database.ref('/lugares/' + lugar.id).remove();
     }
 
 }

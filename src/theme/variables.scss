@@ -38,8 +38,21 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  micolor:    yellow
 );
+
+$link-color:                 color($colors, micolor) !default;
+
+$toolbar-background:         #151515 !default;
+$toolbar-border-color:       #222 !default;
+$toolbar-active-color:       $link-color !default;
+$toolbar-inactive-color:     #8c8c8c !default;
+
+$tabs-background:            #151515 !default;
+$tabs-border-color:          #222 !default;
+$tabs-tab-color-inactive:    #8c8c8c !default;
+$tabs-tab-color-active:      $link-color !default;
 
 
 // App iOS Variables
